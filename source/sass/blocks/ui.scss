@@ -1,0 +1,45 @@
+.sale-box {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $text--lable;
+  transform: matrix(1, -0.05, -0.05, 1, 0, 0);
+  background: $lable-bg;
+  box-shadow: 0 0 30px 5px rgba(236, 193, 4, 0.35);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 271.61px;
+  height: 85.88px;
+}
+
+.move-block {
+  position: absolute;
+  top: 18%;
+  left: 40%;
+  z-index: 20;
+
+  &.active {
+    animation: translate 5s infinite;
+  }
+}
+
+@keyframes translate {
+    0% {
+      transform: translateX(-25px);
+    }
+
+    50% {
+      transform: translateX(25px);
+    }
+
+    100% {
+      transform: translateX(-25px);
+    }
+}
+
