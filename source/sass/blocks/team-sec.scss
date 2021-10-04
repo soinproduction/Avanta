@@ -1,0 +1,67 @@
+.team-sec {
+  padding: 100px 0;
+  background-image: url(../img/repeat-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1F1F1F;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 80px 100px;
+  }
+}
+
+.team-item {
+  width: 250px;
+  cursor: pointer;
+
+  &:hover {
+    .team-item__wrapp {
+      transform: skew(-6deg) scale(1.1) translate(0 , -10px);
+    }
+  }
+
+  &__wrapp {
+    transform: skew(-6deg);
+    background: #FECE03;
+    box-shadow: 0px 0px 30px 5px rgba(236, 193, 4, 0.35);
+    border-radius: 8px;
+    position: relative;
+    height: 210px;
+    margin-bottom: 15px;
+    transition: all .4s;
+  }
+
+  &__image {
+    transform: skew(6deg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $text--white;
+    transform: matrix(1, 0, -0.1, 1, 0, 0);
+  }
+
+  span {
+    font-family: $font-family--s;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

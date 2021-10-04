@@ -85,3 +85,11 @@
     z-index: 2;
   }
 }
+
+.main-btn {
+  transition: all .4s;
+
+  &:hover {
+    transform: skew(-9deg) translate(5px, -5px);
+  }
+}

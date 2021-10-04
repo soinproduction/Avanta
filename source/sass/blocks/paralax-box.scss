@@ -1,0 +1,21 @@
+.paralax-box {
+  width: 100%;
+
+  h2 {
+    font-family: $font-family--s;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 288px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: transparent;
+    background: url(../img/paralax-bg.png);
+    background-clip: text;
+    transform: matrix(0.99, 0, -0.12, 1, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:  top;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}

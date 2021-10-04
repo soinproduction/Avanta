@@ -1,0 +1,115 @@
+footer {
+  padding: 200px 0 120px;
+  background-color: #1F1F1F;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 100px;
+
+  &__item {
+    width: fit-content;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 100%;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $text--white;
+    transform: matrix(1, 0, -0.1, 1, 0, 0);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+
+    a {
+      font-family: $font-family--s;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: 0.02em;
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  margin-bottom: 27px;
+}
+
+.footer-contact__item {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+
+  .tell-number {
+    margin-right: 10px;
+  }
+
+  address {
+    font-family: $font-family--s;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 100%;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $text--white;
+  }
+
+  a:not(.tell-number) {
+    font-family: $font-family--s;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  &:first-child {
+    margin-bottom: 25px;
+  }
+}
+
+.footer-inner__btn {
+  width: 266px;
+  height: 62px;
+  line-height: 100%;
+  transition: all .4s;
+  margin-bottom: 20px;
+
+  &:hover {
+    transform: matrix(0.99, 0, -0.12, 1, 0, 0) translate(5px, -5px);
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  grid-gap: 13px;
+}
+
+
+.privacy {
+  font-family: $font-family--s;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}

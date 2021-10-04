@@ -48,7 +48,19 @@ let secondSwiperNav = new Swiper(".second-slider", {
   // },
 });
 
+let tabsSwiper = new Swiper(".tabs-slider", {
+  spaceBetween: 55,
+  slidesPerView: 3,
+  centeredSlides: true,
+  initialSlide: 2,
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
+});
 
+AOS.init();
+// AOS.refresh();
 
 
   var block_show = null;
@@ -60,9 +72,12 @@ let secondSwiperNav = new Swiper(".second-slider", {
     var et = $('.second-section').offset().top;
     var eh = $('.second-section').outerHeight();
 
+    // var et = $('.paralax-box').offset().top;
+    // var eh = $('.paralax-box').outerHeight();
+
     if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
       if (block_show == null || block_show == false) {
-        console.log('Блок active в области видимости');
+        // console.log('Блок active в области видимости');
         scrollBox.classList.add("active")
 
         // scrollBox.style.transform = 'translateX(' + y + 'px)';
@@ -70,9 +85,9 @@ let secondSwiperNav = new Swiper(".second-slider", {
       block_show = true;
     } else {
       if (block_show == null || block_show == true) {
-        console.log('Блок active скрыт');
+        // console.log('Блок active скрыт');
 
-        scrollBox.classList.remove("active")
+        scrollBox.classList.remove  ("active")
       }
       block_show = false;
     }
@@ -84,4 +99,33 @@ let secondSwiperNav = new Swiper(".second-slider", {
 
   $(document).ready(function(){
     scrollTracking();
+  });
+
+
+
+
+  $(window).scroll(function(e){
+    parallax();
+  });
+    var secHight = $('.third-sec').offset().top;
+    var secHight2 = $('.frouth-sec').offset().top;
+
+    function parallax(){
+    var scrolled = $(window).scrollTop();
+    var value = scrolled - secHight;
+    var value2 = scrolled - secHight2;
+    $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.15 + 10)+'px');
+    $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15+ 10)+'px');
+  }
+
+
+  const container = document.querySelector('.filter-buttons')
+
+  container.addEventListener('click', function(e) {
+    const items = document.querySelectorAll('.filter-buttons__btn')
+    const target = e.target
+    Array.from(items).forEach(item => {
+      item.classList.remove('active')
+    })
+    target.classList.add('active')
   });

@@ -6,12 +6,12 @@ body {
   line-height: normal;
   font-family: "Bebas Neue";
   color: #000000;
-  // background-color: #D0DFEF;
-  overflow-x: hidden;
 }
 
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 *,
@@ -142,15 +142,31 @@ input[type="number"] {
   max-width: 1530px;
   margin: 0 auto;
   padding: 0 5px;
+
+  &--video {
+    max-width: 1800px;
+  }
+
+  &--team {
+    max-width: 1700px;
+  }
 }
 
 .bg-block {
-  background: url(../img/first-sec-logo.png), url(../img/first-sec-logo.webp);
-  background-size: cover;
+  background: url(../img/first-sec-logo.png);
+  background-size: cover !important;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
 }
 
+
+.group-bg {
+  background-image: url(../img/test.png);
+  background-color: #1F1F1F;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 
 
