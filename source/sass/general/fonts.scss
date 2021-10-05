@@ -1,10 +1,10 @@
 @font-face {
   font-style: normal;
-  font-weight: 900;
-  font-family: "cross";
+  font-weight: 700;
+  font-family: "open";
 
   font-display: swap;
-  src: url("../fonts/cross.svg") format("svg");
+  src: url("../fonts/opensanscondensedbold.woff2") format("woff2"), url("../fonts/opensanscondensedbold.woff") format("woff");
 }
 
 @font-face {
