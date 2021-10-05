@@ -148,10 +148,10 @@ AOS.init();
         var scrolled = $(window).scrollTop();
         var value = scrolled - secHight;
         var value2 = scrolled - secHight2;
-        $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.15 + 10)+'px');
-        $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15+ 10)+'px');
+        $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.150000 + 10)+'px');
+        $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.150000+ 10)+'px');
       }
-  } else if ($(window).width() < 575) {
+  } else if ($(window).width() < 992) {
     $(window).scroll(function(e){
       parallax();
     });
@@ -162,8 +162,8 @@ AOS.init();
       var scrolled = $(window).scrollTop();
       var value = scrolled - secHight;
       var value2 = scrolled - secHight2;
-      $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.15000)+'px');
-      $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15000)+'px');
+      $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.100000)+'px');
+      $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.100000)+'px');
     }
   }
 

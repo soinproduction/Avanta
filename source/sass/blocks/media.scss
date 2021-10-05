@@ -2052,10 +2052,10 @@
   // ----- frouth-sec -------
 
   .frouth-sec__title span {
-    right: 0;
+    right: 10px;
     text-align: right;
-    width: 24%;
-    bottom: -70%;
+    width: 30%;
+    bottom: -51%;
     line-height: Min(4.688vw, 30px);
     font-size: Min(3.750vw, 18px);
   }
@@ -2135,7 +2135,7 @@
  }
 
  .frouth-sec__title h2 {
-   font-size: Min(27vw, 110px);
+   font-size: Min(31vw, 110px);
  }
 
 
@@ -2490,6 +2490,11 @@
   footer {
     padding: 140px 0 20px;
   }
+
+  section, .group-bg {
+    background-size: cover !important;
+  }
+
 
 }
 
