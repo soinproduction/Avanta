@@ -163,7 +163,7 @@ AOS.init();
       var value = scrolled - secHight;
       var value2 = scrolled - secHight2;
       $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.15000)+'px');
-      $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15000 + 10)+'px');
+      $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15000)+'px');
     }
   }
 
@@ -179,3 +179,51 @@ AOS.init();
     })
     target.classList.add('active')
   });
+
+
+
+  var mnu = $('.fixed-nav');
+  var main = $('.main');
+	scrollPrev = 0;
+
+  $(window).scroll(function() {
+    var scrolled = $(window).scrollTop();
+
+    if (  scrolled > scrollPrev ) {
+      mnu.addClass('out');
+      main.addClass('out');
+    } else {
+      mnu.removeClass('out');
+      main.removeClass('out');
+    }
+    scrollPrev = scrolled;
+  });
+
+
+  $('.menu').click(function(){
+    $('.fixed-nav').addClass('out');
+    $('.mobile-menu').toggleClass('active');
+    $('.mobile-btn').toggleClass('active');
+    $('body').toggleClass('overlay');
+  });
+
+
+  // $('.overlay').click(function(){
+  //   $('.mobile-menu').removeClass('active');
+  //   console.log('123')
+  // });
+
+
+  jQuery(function($){
+    $(document).mouseup(function (e){ // событие клика по веб-документу
+      var div = $(".mobile-menu.active"); // тут указываем ID элемента
+      if (!div.is(e.target) // если клик был не по нашему блоку
+          && div.has(e.target).length === 0) { // и не по его дочерним элементам
+        div.removeClass('active');
+        $('body').removeClass('overlay');// скрываем его
+      }
+    });
+  });
+
+
+

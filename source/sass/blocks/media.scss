@@ -2494,16 +2494,23 @@
 
 
 
-// @media screen and  (max-width: 1600px) {
+@media  (min-width: 280px) and (max-width: 992px) {
+  .fixed-nav {
+    display: flex;
+    transform: translateY(0%);
+    transition: all .4s;
 
-//   .move-block {
-//     top: 26%;
-//     width: 40vw;
-//   }
+    &.out {
+      transform: translateY(140%);
+    }
+  }
 
-//   .second-slider {
-//     max-width: 50vw;
-//   }
-// }
+  .mobile-menu {
+    display: flex;
+  }
+
+
+
+}
 
 
