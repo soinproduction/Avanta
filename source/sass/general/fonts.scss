@@ -1,5 +1,14 @@
 @font-face {
   font-style: normal;
+  font-weight: 900;
+  font-family: "cross";
+
+  font-display: swap;
+  src: url("../fonts/cross.svg") format("svg");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 400;
   font-family: "Bebas Neue";
 

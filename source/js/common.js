@@ -23,10 +23,24 @@ let firstSwiper = new Swiper(".first-slider", {
   thumbs: {
     swiper: firstSwiperNav,
   },
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
+  breakpoints: {
+    320: {
+      centeredSlides: true,
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    },
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    // 992: {
+    //   slidesPerView: 4,
+    //   spaceBetween: 30,
+    // },
+  }
 });
 
 let secondSwiperNav = new Swiper(".second-slider", {
@@ -57,6 +71,26 @@ let tabsSwiper = new Swiper(".tabs-slider", {
   //   nextEl: ".swiper-button-next",
   //   prevEl: ".swiper-button-prev",
   // },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.4,
+      centeredSlides: false,
+      spaceBetween: 20,
+      initialSlide: 1,
+    },
+    575: {
+      slidesPerView: 1.5,
+      spaceBetween: 30,
+      initialSlide: 1,
+      centeredSlides: false,
+    },
+    1200: {
+      slidesPerView: 3,
+      centeredSlides: true,
+      spaceBetween: 20,
+      initialSlide: 1,
+    },
+  }
 });
 
 AOS.init();
@@ -102,21 +136,37 @@ AOS.init();
   });
 
 
+  if ($(window).width() > 992) {
 
+      $(window).scroll(function(e){
+        parallax();
+      });
+        var secHight = $('.third-sec').offset().top;
+        var secHight2 = $('.frouth-sec').offset().top;
 
-  $(window).scroll(function(e){
-    parallax();
-  });
-    var secHight = $('.third-sec').offset().top;
-    var secHight2 = $('.frouth-sec').offset().top;
+        function parallax(){
+        var scrolled = $(window).scrollTop();
+        var value = scrolled - secHight;
+        var value2 = scrolled - secHight2;
+        $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.15 + 10)+'px');
+        $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15+ 10)+'px');
+      }
+  } else if ($(window).width() < 575) {
+    $(window).scroll(function(e){
+      parallax();
+    });
+      var secHight = $('.third-sec').offset().top;
+      var secHight2 = $('.frouth-sec').offset().top;
 
-    function parallax(){
-    var scrolled = $(window).scrollTop();
-    var value = scrolled - secHight;
-    var value2 = scrolled - secHight2;
-    $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.15 + 10)+'px');
-    $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15+ 10)+'px');
+      function parallax(){
+      var scrolled = $(window).scrollTop();
+      var value = scrolled - secHight;
+      var value2 = scrolled - secHight2;
+      $('.third-sec .paralax-box > h2').css('background-position-y', + (value * 0.15000)+'px');
+      $('.frouth-sec .paralax-box > h2').css('background-position-y', + (value2 * 0.15000 + 10)+'px');
+    }
   }
+
 
 
   const container = document.querySelector('.filter-buttons')

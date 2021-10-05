@@ -11,9 +11,12 @@
   }
 
   &__title h2 {
-    transform: initial;
+    text-transform: initial;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: $font-family--f;
+    transform: initial;
+    font-size: Min(50vw ,400px);
   }
 
   &__title {
