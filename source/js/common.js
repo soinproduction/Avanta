@@ -209,4 +209,49 @@ AOS.init();
   });
 
 
+  let overlay = $('.overlay-modal');
+  let body = $('body');
+  let closeBtn = $('.close-modal');
+
+
+
+  // window.addEventListener('DOMContentLoaded', () => {
+  //   overlay.fadeOut();
+	// });
+
+$('[data-modal=call-back]').on('click', function(e){
+  e.preventDefault();
+  overlay.fadeIn();
+  body.addClass('fixed-body');
+  $('#call-back').fadeIn();
+
+});
+
+$('[data-modal=start]').on('click', function(e){
+  e.preventDefault();
+  overlay.fadeIn();
+  body.addClass('fixed-body');
+  $('#start').fadeIn();
+
+});
+
+closeBtn.on('click', function(e){
+  e.preventDefault();
+  overlay.fadeOut();
+  body.removeClass('fixed-body');
+  $('#call-back').fadeOut();
+});
+
+
+$(document).mouseup(function (e){
+		var div = $(".callback-modal");
+		if (!div.is(e.target) && div.has(e.target).length === 0) {
+			div.fadeOut();
+      overlay.fadeOut();
+      body.removeClass('fixed-body');
+		}
+	});
+
+
+
 

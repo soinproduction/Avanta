@@ -1769,6 +1769,40 @@
 
 @media (min-width: 280px) and (max-width: 576px) {
 
+
+  // .modal-form__name {
+  //   min-width: 85px;
+  // }
+
+  .form-wrapp {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .modal-form__lable {
+    grid-gap: 1vw;
+  }
+
+  .callback-modal {
+    padding: 28px 0 23px;
+  }
+
+  .callback-modal__title {
+    margin-bottom: 28px;
+  }
+
+  .modal-form {
+    grid-gap: 19px;
+  }
+
+  .custom-checkbox>span {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+
+  // ---- moda-form  ---
+
   .mobile-btn {
     display: flex;
 
@@ -2545,4 +2579,9 @@
 
 }
 
+@media  (min-width: 280px) and (max-width: 768px) {
+  .overlay-modal {
+    overflow-y: scroll;
+  }
 
+}

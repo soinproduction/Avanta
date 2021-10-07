@@ -1,0 +1,119 @@
+.overlay-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 400;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.472);
+  display: none;
+}
+
+.form-wrapp {
+  margin: 0 auto;
+  width: 81%;
+}
+
+.callback-modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  width: Min(84.375vw, 744px);
+  padding: 66px 0 37px;
+  background: #fece03;
+  border-radius: 18px;
+  box-shadow: 0 0 30px 5px rgba(236, 193, 4, 0.2);
+
+  &__title {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: Min(8.125vw ,48px);
+    line-height: Min(7.813vw,100%);
+    margin-bottom: 54px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $text--modal;
+    transform: matrix(1, 0, -0.1, 1, 0, 0);
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  grid-gap: 30px;
+
+  &__lable {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    grid-gap: 37px;
+  }
+
+  &__name {
+    flex-shrink: 0;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: Min(5vw ,24px);
+    line-height: 100%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: $text--name;
+    transform: matrix(1, 0, -0.1, 1, 0, 0);
+    width: Min(26.563vw,110px);
+    text-align: center;
+  }
+
+  input {
+    height: Min(6.563vw ,35px);
+    background-color: transparent;
+    border: 1px solid rgba(69, 69, 69, 0.5);
+    border-radius: 4px;
+    text-indent: 2vw;
+  }
+}
+
+
+.modal-submit {
+  height: Min( 12.500vw, 47px);
+  width:  Min( 53.125vw, 186px);
+  background: $color--white;
+  box-shadow: 6px 9px 40px rgba(137, 117, 27, 0.2);
+  border-radius: 8px;
+  transform: matrix(0.99, 0, -0.12, 1, 0, 0);
+
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: Min(5.625vw,24px);
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: $text--name;
+  transform: matrix(1, 0, -0.1, 1, 0, 0);
+  transition: all .4s;
+
+  &:hover {
+    transform: matrix(1, 0, -0.1, 1, 0, 0) translate(5px, -5px);
+  }
+}
+
+
+
+
+
+
+
+.close-modal {
+  position: absolute;
+  top: Min(3.750vw,28px);
+  right: Min(5vw ,28px);
+}
+

@@ -9,6 +9,14 @@ body {
   overflow-x: hidden;
 }
 
+body.fixed-body {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;
