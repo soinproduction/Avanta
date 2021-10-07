@@ -2519,4 +2519,30 @@
 
 }
 
+@media  (min-width: 1300px) and (max-width: 1440px) {
+  .price-sec__box {
+    flex-direction: row;
+    max-width: 80%;
+    margin-left: 0;
+  }
+
+  .price-sec__item {
+    max-width: 500px;
+  }
+
+  .price-sec__image {
+    right: -18vw;
+    bottom: 0%;
+  }
+
+  .service-sec__box {
+    max-width: 95%;
+  }
+
+  .price-sec__image img {
+    width: 26vw;
+  }
+
+}
+
 

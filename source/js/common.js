@@ -1,15 +1,3 @@
-
-// const burgerBtn = document.querySelector(".burger-btn");
-// const mobileBox = document.querySelector(".mobile-box");
-// const filterAside = document.querySelector(".filter-aside");
-// const closeAside = document.querySelector(".close-filter");
-
-
-// burgerBtn.onclick = function() {
-//   burgerBtn.classList.toggle('active');
-//   mobileBox.classList.toggle('active');
-// };
-
 let firstSwiperNav = new Swiper(".first-nav", {
   slidesPerView: 4,
   freeMode: true,
@@ -35,17 +23,12 @@ let firstSwiper = new Swiper(".first-slider", {
     768: {
       slidesPerView: 1,
       spaceBetween: 10,
-    },
-    // 992: {
-    //   slidesPerView: 4,
-    //   spaceBetween: 30,
-    // },
+    }
   }
 });
 
 let secondSwiperNav = new Swiper(".second-slider", {
   slidesPerView: 1,
-  // effect: "fade",
   navigation: {
     nextEl: ".second-slider__r",
     prevEl: ".second-slider__l",
